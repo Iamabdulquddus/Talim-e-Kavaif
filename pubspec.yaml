@@ -1,0 +1,41 @@
+name: talim_e_kavaif
+description: Curriculum Vitae making app flutter
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  dynamic_color: ^1.6.5
+  get: ^4.6.5
+  dropdown_button2: ^1.8.8
+  syncfusion_flutter_datepicker: ^20.3.50
+  intl: ^0.17.0 #dateformate
+  dots_indicator: ^2.1.0
+  font_awesome_flutter: ^10.2.1
+  image_picker: ^0.8.6
+  printing: ^5.9.3
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  sqflite: ^2.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/icons/

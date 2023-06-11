@@ -25,8 +25,14 @@ class _DatePickerState extends State<DatePicker> {
       child: TextFormField(
         controller: widget.controller,
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.cake),
-          fillColor: Colors.white,
+          prefixIcon:  IconTheme(
+            data: IconThemeData(
+              color: Theme.of(context).brightness == Brightness.light ?Theme.of(context).primaryColor : Theme.of(context).indicatorColor,
+            ),
+            child:  Icon(Icons.cake),
+          ),
+
+          // fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(

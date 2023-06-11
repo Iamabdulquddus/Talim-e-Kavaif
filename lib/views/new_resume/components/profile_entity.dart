@@ -12,25 +12,14 @@ class ProfileEntity extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            color: wWhiteColor,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                spreadRadius: 1,
-                blurRadius: 2,
-                offset: Offset(1, 2),
-              ),
-            ]),
+      child: Card(
+        elevation: 2,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
               Image.asset(name, width: 35, height: 35, fit: BoxFit.cover,),
-            SizedBox(height: 3,),
+            SizedBox(height: 5,),
             Text(
               text,
               style: MyTextStyles.subHeadingBoldPrimary,

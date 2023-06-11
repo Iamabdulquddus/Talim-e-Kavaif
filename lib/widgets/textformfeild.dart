@@ -8,7 +8,7 @@ class CustomTextFormFeild extends StatefulWidget {
   final int? maxLines;
   final int? maxLenght;
   final void Function(String)? onChange;
-  final Icon? icon;
+  final IconData? icon;
   final TextInputType? keyboardType;
 
   const CustomTextFormFeild({
@@ -41,12 +41,17 @@ class _CustomTextFormFeildState extends State<CustomTextFormFeild> {
         decoration: InputDecoration(
 
           labelText: widget.labelText,
-          prefixIcon: widget.icon,
+          prefixIcon: IconTheme(
+            data: IconThemeData(
+              color: Theme.of(context).brightness == Brightness.light ?Theme.of(context).primaryColor : Theme.of(context).indicatorColor,
+            ),
+            child:  Icon(widget.icon),
+          ),
           counterStyle: const TextStyle(
             height: double.minPositive,
           ),
           counterText: "",
-          fillColor: Colors.white,
+          // fillColor: Colors.white,
           filled: true,
           errorText: widget.errorText,
           border: OutlineInputBorder(

@@ -90,58 +90,58 @@ class MyTextStyles {
 
   ///Primary Colors********************************
   static TextStyle sectionTitleLargePrimary = TextStyle(
-    color: primary,
+    
     fontSize: 36,
     fontWeight: FontWeight.bold,
   );
   static TextStyle sectionTitleSmallPrimary = TextStyle(
-    color: primary,
+
     fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
   static TextStyle headingLargePrimary = TextStyle(
     fontSize: 20,
-    color: primary,
+    
     fontWeight: FontWeight.bold,
   );
 
   static TextStyle headingSmallPrimary = TextStyle(
     fontSize: 18,
-    color: primary,
+    
     fontWeight: FontWeight.bold,
   );
 
   static TextStyle headingxSmallBoldPrimary = TextStyle(
     fontSize: 16,
-    color: primary,
+    
     fontWeight: FontWeight.bold,
   );
 
   static TextStyle headingxSmallPrimary = TextStyle(
     fontSize: 16,
-    color: primary,
+    
   );
 
   static TextStyle subHeadingBoldPrimary = TextStyle(
-    color: primary,
+    
     fontSize: 14,
     fontWeight: FontWeight.bold,
   );
 
   static TextStyle subHeadingPrimary = TextStyle(
-    color: primary,
+    
     fontSize: 14,
   );
 
   static TextStyle regularPrimary = TextStyle(
     fontSize: 12,
-    color: primary,
+    
   );
 
   static TextStyle xSmallPrimary = TextStyle(
     fontSize: 10,
-    color: primary,
+    
   );
 
 // black ***********************

@@ -37,37 +37,25 @@ class _PickImageState extends State<PickImage> {
             onTap: () {
               _openImagePicker();
             },
-            child: Container(
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.white.withOpacity(0.8),
-                    offset: Offset(-6.0, -6.0),
-                    blurRadius: 16.0,
-                  ),
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    offset: Offset(6.0, 6.0),
-                    blurRadius: 16.0,
-                  ),
-                ],
-                color: lightColor,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              width: 150,
-              height: 150,
-              child: image != null
-                  ? ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.file(
-                        image!,
-                        fit: BoxFit.cover,
+            child: Card(
+              elevation: 2,
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: image != null
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.file(
+                          image!,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                    : Icon(
+                        // color: secondary,
+                        Icons.camera_alt,
+                  size: 30,
                       ),
-                    )
-                  : Icon(
-                      color: secondary,
-                      Icons.camera_alt,
-                    ),
+              ),
             ),
           ),
         ],

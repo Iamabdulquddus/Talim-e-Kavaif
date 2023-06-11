@@ -9,28 +9,10 @@ class ResumeCardHomeListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
+      padding: const EdgeInsets.all(10.0),
       children: [
-        Container(
-          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-          decoration: BoxDecoration(
-            color: lightColor,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.3),
-                spreadRadius: 2,
-                blurRadius: 2,
-                offset: const Offset(2, 2),
-              ),
-              const BoxShadow(
-                color: Colors.white,
-                spreadRadius: 2,
-                blurRadius: 2,
-                offset: Offset(-2, -2),
-              ),
-            ],
-          ),
-          // elevation: 1,
+        Card(
+    elevation: 5,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
@@ -38,11 +20,7 @@ class ResumeCardHomeListItem extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+                    Card(
                       child: Image.asset(
                         resumeBro,
                         height: 100,
@@ -68,21 +46,21 @@ class ResumeCardHomeListItem extends StatelessWidget {
                           ),
                           Text(
                             'Angelayu@gmail.com',
-                            style: MyTextStyles.headingxSmallGrey,
+                            style: MyTextStyles.headingxSmallPrimary,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text('03004400443',
-                              style: MyTextStyles.headingxSmallGrey),
+                              style: MyTextStyles.headingxSmallPrimary),
                           Text('Oct 25, 2022 02:18 pm',
-                              style: MyTextStyles.headingxSmallGrey),
+                              style: MyTextStyles.headingxSmallPrimary),
                         ],
                       ),
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   thickness: 1,
-                  color: secondary.withOpacity(0.3),
+                  // color: secondary.withOpacity(0.3),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,7 +80,6 @@ class ResumeCardHomeListItem extends StatelessWidget {
                     ),
                     const Icon(
                       Icons.more_vert,
-                      color: primary,
                       size: 25,
                     ),
                   ],

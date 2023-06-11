@@ -40,16 +40,17 @@ class _ResumeCardHomeState extends State<ResumeCardHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Resume Maker'),
+        title:  Text('Resume Maker', style: MyTextStyles.sectionTitleSmallPrimary,),
+        elevation: 1,
       ),
       body: ResumeCardHomeListItem(),
       floatingActionButton: FloatingActionButton(
-        backgroundColor:  primary,
+        // backgroundColor:  primary,
         onPressed: () async {
           // await resumeController.getResumeId();
           Get.to(const NewResume());
         },
-        child: const Icon(Icons.add, color: wWhiteColor,),
+        child: const Icon(Icons.add, ),
       ),
     );
   }

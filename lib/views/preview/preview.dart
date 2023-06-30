@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
+import '../../controllers/resume_controller.dart';
 import '../templates/template_name.dart';
 import 'components/data.dart';
 
@@ -21,7 +23,8 @@ class PreviewState extends State<Preview> with SingleTickerProviderStateMixin {
 
   PrintingInfo? printingInfo;
 
-  final _data = const CustomData();
+  final ResumeController resumeController = Get.find();
+  final _data =  CustomData();
 
   @override
   void initState() {
@@ -48,6 +51,7 @@ class PreviewState extends State<Preview> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Preview Template'),
+        elevation: 2,
       ),
       body: PdfPreview(
         maxPageWidth: 700,

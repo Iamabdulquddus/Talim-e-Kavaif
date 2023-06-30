@@ -10,6 +10,7 @@ class SelectResumeTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Select Template"), elevation: 2,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.count(

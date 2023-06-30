@@ -199,7 +199,9 @@ class _NewResumeState extends State<NewResume> {
 
                     Expanded(
                       child: FilledButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed(MyRoutes.getSelectResumeTemplateRoute());
+                        },
 
                         icon:  const Icon(
                           Icons.school,

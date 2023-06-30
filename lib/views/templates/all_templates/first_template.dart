@@ -43,8 +43,8 @@ Future<Uint8List> template1(PdfPageFormat format, CustomData data) async {
                       title: 'Objective',
                       categoryIcon: profileImage,
                     ),
-                    Text('${LoremText().paragraph(20)}',
-                        style: TextStyle(fontSize: 10)),
+                    Text(LoremText().paragraph(20),
+                        style: const TextStyle(fontSize: 10)),
                     SizedBox(height: 10),
                     Category(
                       title: 'Skills',
@@ -84,7 +84,7 @@ Future<Uint8List> template1(PdfPageFormat format, CustomData data) async {
                         phone: '03001234567'),
                   ],
                 ),
-                padding: EdgeInsets.only(right: 10),
+                padding: const EdgeInsets.only(right: 10),
               ),
             ),
             Partition(
@@ -137,31 +137,31 @@ Future<Uint8List> template1(PdfPageFormat format, CustomData data) async {
                   ),
                   WorkExperience(
                       title: 'Peasant',
-                      text: '${LoremText().paragraph(20)}',
+                      text: LoremText().paragraph(20),
                       subheading: 'Classified company',
                       from: '2014',
                       to: '2016'),
                   WorkExperience(
                       title: 'Peasant',
-                      text: '${LoremText().paragraph(20)}',
+                      text: LoremText().paragraph(20),
                       subheading: 'Classified company',
                       from: '2014',
                       to: '2016'),
                   WorkExperience(
                       title: 'Peasant',
-                      text: '${LoremText().paragraph(20)}',
+                      text: LoremText().paragraph(20),
                       subheading: 'Classified company',
                       from: '2014',
                       to: '2016'),
                   WorkExperience(
                       title: 'Peasant',
-                      text: '${LoremText().paragraph(20)}',
+                      text: LoremText().paragraph(20),
                       subheading: 'Classified company',
                       from: '2014',
                       to: '2016'),
                   WorkExperience(
                       title: 'Peasant',
-                      text: '${LoremText().paragraph(20)}',
+                      text: LoremText().paragraph(20),
                       subheading: 'Classified company',
                       from: '2014',
                       to: '2016'),
@@ -274,9 +274,9 @@ class WorkExperience extends StatelessWidget {
             Spacer(),
             Row(
               children: [
-                Text(from, style: TextStyle(fontSize: 8)),
+                Text(from, style: const TextStyle(fontSize: 8)),
                 Text(' - '),
-                Text(to, style: TextStyle(fontSize: 8)),
+                Text(to, style: const TextStyle(fontSize: 8)),
               ],
             ),
             SizedBox(
@@ -307,7 +307,7 @@ class WorkExperience extends StatelessWidget {
               ),
               Text(
                 text,
-                style: TextStyle(fontSize: 9),
+                style: const TextStyle(fontSize: 9),
               ),
             ],
           ),
@@ -356,12 +356,12 @@ class EducationFields extends StatelessWidget {
               children: [
                 Text(
                   from,
-                  style: TextStyle(fontSize: 8),
+                  style: const TextStyle(fontSize: 8),
                 ),
                 Text(' - '),
                 Text(
                   to,
-                  style: TextStyle(fontSize: 8),
+                  style: const TextStyle(fontSize: 8),
                 ),
               ],
             ),
@@ -388,7 +388,7 @@ class EducationFields extends StatelessWidget {
                     color: pdfPrimary,
                     fontWeight: FontWeight.bold),
               ),
-              Text(text, style: TextStyle(fontSize: 10)),
+              Text(text, style: const TextStyle(fontSize: 10)),
             ],
           ),
         ),
@@ -439,7 +439,7 @@ class ReferenceFields extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(companyName, style: TextStyle(fontSize: 12)),
+              Text(companyName, style: const TextStyle(fontSize: 12)),
               Text(
                 jobTitle,
                 style: TextStyle(
@@ -449,11 +449,11 @@ class ReferenceFields extends StatelessWidget {
               ),
               Text(
                 phone,
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
               ),
               Text(
                 email,
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
               ),
             ],
           ),
@@ -507,7 +507,7 @@ class ProjectPublication extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(text, style: TextStyle(fontSize: 10)),
+              Text(text, style: const TextStyle(fontSize: 10)),
             ],
           ),
         ),
@@ -530,7 +530,7 @@ class Category extends StatelessWidget {
         gradient: LinearGradient(
           colors: [pdfLightColor, PdfColors.white.shade(0.1)],
         ),
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(5),
         ),
       ),
@@ -581,7 +581,7 @@ class SkillInterestActivityLanguage extends StatelessWidget {
             ),
             Text(
               item,
-              style: TextStyle(fontSize: 11),
+              style: const TextStyle(fontSize: 11),
             ),
           ],
         ),

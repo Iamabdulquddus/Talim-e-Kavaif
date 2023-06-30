@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
-
 import '../constants/sqflite_constants.dart';
 import '../models/common_list_model.dart';
 import '../models/education_list_model.dart';
@@ -125,7 +124,7 @@ class DatabaseHelper {
   }
 
   /// Insert UserResumeListModel
-  Future<int> insertUserBoi(UserResumeListModel userResumeListModel) async {
+  Future<int> insertUserBoi(UserResumeListModel userResumeListModel) async  {
     Database db = await instance.database;
     int result = await db.insert(USER_BIO_TABLE, userResumeListModel.toJson());
     return result;
@@ -133,7 +132,7 @@ class DatabaseHelper {
 
   /// Update UserResumeListModel
   Future<int> updateUserResumeListModel(
-      UserResumeListModel userResumeListModel) async {
+      UserResumeListModel userResumeListModel) async  {
     Database db = await instance.database;
     int result = await db.update(USER_BIO_TABLE, userResumeListModel.toJson(),
         where: 'id=?', whereArgs: [userResumeListModel.id]);

@@ -64,7 +64,6 @@ class MyApp extends StatelessWidget {
             colorScheme: lightColorScheme,
             extensions: [lightCustomColors],
             useMaterial3: true,
-
           ),
           darkTheme: ThemeData(
             colorScheme: darkColorScheme,
